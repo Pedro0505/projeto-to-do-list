@@ -52,8 +52,7 @@ function removeFinished() {
   const accessLi = document.querySelectorAll('.list');
   for (let i = 0; i < accessLi.length; i += 1) {
     const runList = accessLi[i];
-    const styleList = window.getComputedStyle(accessLi[i]).getPropertyValue('text-decoration');
-    if (styleList === 'line-through solid rgb(0, 0, 0)') {
+    if (runList.className.includes('completed')) {
       runList.remove();
     }
   }
